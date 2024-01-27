@@ -46,7 +46,7 @@ fs.readdir(soundsFilePath, function (err, files) {
         // duration
         let duration = await getAudioDurationInSeconds(wavFilePath);
         if (isNaN(duration)) {
-            console.log('error', duration)
+            // console.log('error', duration)
         } else {
             item.duration = Math.round(duration)
         }
@@ -67,14 +67,14 @@ fs.readdir(soundsFilePath, function (err, files) {
     }
 
     asyncForEach(wavFiles, pushItem).then(() => {
-        // console.log(newItems);
+        // // console.log(newItems);
 
         let string = JSON.stringify(newItems);
-        string = CryptoJS.AES.encrypt(string, '不要恐慌');
+        // string = CryptoJS.AES.encrypt(string, '不要恐慌');
 
-        console.log(string);
+        // // console.log(string);
 
-        // fs.writeFileSync(dataFilePath, , 'utf8');
+        fs.writeFileSync(dataFilePath, string, 'utf8');
     })
 
 
