@@ -18,27 +18,31 @@ String.prototype.toDuration = function () {
 }
 
 /**
+ * Intro stat
+ */
+const date = new Date();
+let day = date.getDate();
+let month = date.getMonth() + 1;
+let year = date.getFullYear();
+let count = sounds.length
+document.querySelector('.intro p').innerHTML = `<span>更新日期：${year}年${month}月${day}日</span><span>音效数量：${count}个</span>`
+
+/**
  * Color Scheme
  */
 {
-    let theme = Cookies.get('theme')
+    const userTheme = Cookies.get('theme');
+    const defaultTheme = 'light';
+    const html = document.documentElement;
+    const currentTheme = userTheme && ['dark', 'light'].includes(userTheme) ? userTheme : defaultTheme;
 
-    if (theme && ['dark', 'light'].includes(theme)) {
-        document.documentElement.dataset.theme = theme;
-    }
+    html.dataset.theme = currentTheme;
 
     document.querySelector('.theme-toggle').addEventListener('click', (button) => {
-        let oldTheme = document.documentElement.dataset.theme;
+        const toTheme = currentTheme == 'light' ? 'dark' : 'light';
 
-        let newTheme;
-        if (oldTheme == 'dark') {
-            newTheme = 'light'
-        } else {
-            newTheme = 'dark';
-        }
-
-        document.documentElement.dataset.theme = newTheme;
-        Cookies.set('theme', newTheme)
+        html.dataset.theme = toTheme;
+        Cookies.set('theme', toTheme)
     });
 }
 
@@ -88,6 +92,8 @@ String.prototype.toDuration = function () {
             Cookies.set('filename_type', toType)
         })
     }
+
+    makeDomainAsFileNameToggle();
 
 }
 

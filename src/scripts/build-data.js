@@ -55,7 +55,71 @@ fs.readdir(soundsFilePath, function (err, files) {
         const stat = fs.statSync(wavFilePath)
         item.size = Math.round(stat.size / 1024)
         item.atime = stat.atime
-        // console.log(item)
+
+
+        let tags = item.tags ?? '';
+        tags = tags.split(', ');
+
+        // add tags.
+        const tagsRule = [
+            {
+                'name': '马里奥',
+                'tags': ['游戏'],
+                'cover': '马里奥'
+            },
+            {
+                'name': '红警',
+                'tags': ['游戏'],
+            },
+            {
+                'name': '星球大战',
+                'tags': ['电影'],
+                'cover': '星球大战'
+            },
+            {
+                'name': '贾维斯',
+                'tags': ['电影', '钢铁侠', '机器人'],
+                'cover': '贾维斯'
+            },
+            {
+                'name': '哆啦A梦',
+                'tags': ['卡通'],
+            },
+            {
+                'name': '小黄人',
+                'tags': ['卡通'],
+                'cover': '小黄人'
+            },
+            {
+                'name': '变形金刚',
+                'tags': ['电影', '机器人'],
+                'cover': '变形金刚'
+            },
+            {
+                'name': '周杰伦',
+                'tags': ['周杰伦', '歌曲'],
+                'cover': '周杰伦'
+            }
+        ];
+
+        tagsRule.forEach(rule => {
+            if (item.name.includes(rule.name)) {
+                rule.tags.forEach((tag) => {
+                    if (!tags.includes(tag)) {
+                        tags.push(tag)
+                    }
+                })
+
+                if (rule.cover && !item.cover) {
+                    item.cover = rule.cover;
+                }
+            }
+        })
+
+        item.tags = tags.join(', ');
+
+        console.log(item)
+
 
         newItems.push(item)
     }
