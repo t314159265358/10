@@ -39,7 +39,7 @@ document.querySelector('.intro p').innerHTML = `<span>更新日期：${year}年$
     html.dataset.theme = currentTheme;
 
     document.querySelector('.theme-toggle').addEventListener('click', (button) => {
-        const toTheme = currentTheme == 'light' ? 'dark' : 'light';
+        const toTheme = html.dataset.theme == 'light' ? 'dark' : 'light';
 
         html.dataset.theme = toTheme;
         Cookies.set('theme', toTheme)
