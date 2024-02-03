@@ -373,7 +373,7 @@ body {
         }
 
         &[data-text="LockChime.VIP"] {
-            color: #000;
+            color: var(--text-color);
         }
 
         &[data-text="LockChime.WAV"] {
@@ -658,6 +658,11 @@ main {
         &:hover {
             background: var(--text-color);
             color: var(--body-color);
+        }
+
+        &.china-red {
+            background: #C3151B;
+            color: #fff;
         }
     }
 }

@@ -4,6 +4,10 @@ import WaveSurfer from 'wavesurfer.js'
 
 import Cookies from 'js-cookie'
 
+// sounds.sort((a, b) => new Date(b.atime) - new Date(a.atime))
+
+
+
 
 String.prototype.toDuration = function () {
     var sec_num = parseInt(this, 10); // don't forget the second param
