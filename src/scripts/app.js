@@ -159,7 +159,7 @@ function downloadAudio(file, name = '') {
             cover = 'default';
         }
         let img = item.querySelector('img')
-        img.src = 'sounds/' + cover + '.webp';
+        img.src = 'covers/' + cover + '.webp';
         img.alt = sound.name
 
         function createAudio() {

@@ -14,6 +14,7 @@ fs.promises.copyFile(dataFilePath, backupFilePath)
 const oldItems = JSON.parse(fs.readFileSync(dataFilePath, 'utf8'));
 
 const soundsFilePath = path.join('sounds');
+const coversFilePath = path.join('covers');
 
 fs.readdir(soundsFilePath, function (err, files) {
     if (err) {
@@ -33,12 +34,12 @@ fs.readdir(soundsFilePath, function (err, files) {
 
 
         // cover
-        const imagePath = soundsFilePath + '/' + name + '.webp'
+        const imagePath = coversFilePath + '/' + name + '.webp'
 
         if (fs.existsSync(imagePath)) {
             item.cover = name;
         } else if ('cover' in item) {
-            if (item.cover == name || !fs.existsSync(soundsFilePath + '/' + item.cover + '.webp')) {
+            if (item.cover == name || !fs.existsSync(coversFilePath + '/' + item.cover + '.webp')) {
                 delete item.cover;
             }
         }
