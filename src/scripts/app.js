@@ -170,6 +170,8 @@ function downloadAudio(file, name = '') {
 
             audio.onplaying = function () {
                 item.dataset.status = 'playing'
+
+
             }
 
             audio.onpause = function () {
@@ -190,6 +192,8 @@ function downloadAudio(file, name = '') {
                     currentAudio.currentTime = 0;
                 }
 
+
+
                 currentAudio = audio;
             }, 1000);
 
@@ -200,6 +204,12 @@ function downloadAudio(file, name = '') {
             seekCircle.setAttribute('stroke-dasharray', totalLength)
             seekCircle.setAttribute('stroke-dashoffset', totalLength)
 
+            function formatTime(seconds) {
+                var minutes = Math.round(seconds / 60);
+                var remainingSeconds = Math.round(seconds % 60);
+                return minutes.toString().padStart(2, '0') + ':' + remainingSeconds.toString().padStart(2, '0');
+            }
+
             audio.addEventListener('timeupdate', () => {
                 // // console.log('timeupdate', audio.currentTime)
                 let currentTime = audio.currentTime;
@@ -208,6 +218,8 @@ function downloadAudio(file, name = '') {
                 let progress = totalLength - (currentTime / maxduration * totalLength);
 
                 seekCircle.setAttribute('stroke-dashoffset', progress);
+
+                audio.parentElement.querySelector('.current-time').innerText = formatTime(audio.currentTime);
             });
 
             // append to container
