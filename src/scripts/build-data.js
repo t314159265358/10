@@ -105,7 +105,77 @@ fs.readdir(soundsFilePath, function (err, files) {
                 'name': '塞尔达',
                 'tags': ['林克', 'Zela'],
                 'cover': '塞尔达'
-            }
+            },
+            {
+                'name': 'Akon',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Eminem',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Jay-Z',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Dr.Dre',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': '50 Cent',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'DMX',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Akon',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Snoop Dogg',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Lil Wayne',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Ice Cube',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Coolio',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Biggie',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': '2Pac',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
+            {
+                'name': 'Xzibit',
+                'tags': ['说唱', '歌曲'],
+                'cover': '说唱'
+            },
         ];
 
         tagsRule.forEach(rule => {
