@@ -181,6 +181,11 @@ fs.readdir(soundsFilePath, function (err, files) {
                 'tags': ['说唱', '歌曲'],
                 'cover': '说唱'
             },
+            {
+                'name': '植物大战僵尸',
+                'tags': ['游戏'],
+                'cover': '植物大战僵尸'
+            },
         ];
 
         tagsRule.forEach(rule => {
