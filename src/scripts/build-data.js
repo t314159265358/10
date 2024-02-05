@@ -107,6 +107,11 @@ fs.readdir(soundsFilePath, function (err, files) {
                 'cover': '周杰伦'
             },
             {
+                'name': '周星驰',
+                'tags': ['电影', '星爷'],
+                'cover': '周星驰'
+            },
+            {
                 'name': '塞尔达',
                 'tags': ['林克', 'Zela'],
                 'cover': '塞尔达'
@@ -186,6 +191,11 @@ fs.readdir(soundsFilePath, function (err, files) {
                 'tags': ['游戏'],
                 'cover': '植物大战僵尸'
             },
+            {
+                'name': '鲁班七号',
+                'tags': ['游戏', '王者荣耀'],
+                'cover': '鲁班七号'
+            }
         ];
 
         tagsRule.forEach(rule => {
