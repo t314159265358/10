@@ -199,7 +199,7 @@ function downloadAudio(file, name = '') {
 
             // Circular Timeline
             let seekCircle = item.querySelector('.seek'),
-                totalLength = seekCircle.getTotalLength();
+                totalLength = seekCircle.getTotalLength()
 
             seekCircle.setAttribute('stroke-dasharray', totalLength)
             seekCircle.setAttribute('stroke-dashoffset', totalLength)
