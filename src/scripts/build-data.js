@@ -100,6 +100,11 @@ fs.readdir(soundsFilePath, function (err, files) {
                 'name': '周杰伦',
                 'tags': ['周杰伦', '歌曲'],
                 'cover': '周杰伦'
+            },
+            {
+                'name': '塞尔达',
+                'tags': ['林克', 'Zela'],
+                'cover': '塞尔达'
             }
         ];
 

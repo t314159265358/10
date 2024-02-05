@@ -484,13 +484,17 @@ main {
 .search-form {
     display: flex;
     align-items: center;
-    max-width: 100%;
+    width: 100%;
 
     &:after {
         content: '';
         display: none;
         height: 2rem;
         border-right: 1px solid rgba(128, 128, 128, .4);
+    }
+
+    .input-container {
+        flex: 1;
     }
 
     input {
