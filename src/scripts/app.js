@@ -65,10 +65,10 @@ document.querySelector('.intro p').innerHTML = `<span>更新日期：${year}年$
 
         if (entries[0].isIntersecting) {
             document.querySelector("#header").classList.remove('stuck');
-            document.querySelector("#header").dataset.theme = '';
+            // document.querySelector("#header").dataset.theme = '';
         } else {
             document.querySelector("#header").classList.add('stuck');
-            document.querySelector("#header").dataset.theme = 'dark';
+            // document.querySelector("#header").dataset.theme = 'dark';
         }
 
     });
