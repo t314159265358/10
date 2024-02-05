@@ -195,6 +195,16 @@ fs.readdir(soundsFilePath, function (err, files) {
                 'name': '鲁班七号',
                 'tags': ['游戏', '王者荣耀'],
                 'cover': '鲁班七号'
+            },
+            {
+                'name': '皮卡丘',
+                'tags': ['动漫'],
+                'cover': '皮卡丘'
+            },
+            {
+                'name': '海绵宝宝',
+                'tags': ['动漫'],
+                'cover': '海绵宝宝'
             }
         ];
 
