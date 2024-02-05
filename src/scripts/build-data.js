@@ -84,12 +84,17 @@ fs.readdir(soundsFilePath, function (err, files) {
             },
             {
                 'name': '哆啦A梦',
-                'tags': ['卡通'],
+                'tags': ['动漫'],
             },
             {
                 'name': '小黄人',
-                'tags': ['卡通'],
+                'tags': ['动漫'],
                 'cover': '小黄人'
+            },
+            {
+                'name': '瑞克和莫蒂',
+                'tags': ['动漫'],
+                'cover': '瑞克和莫蒂'
             },
             {
                 'name': '变形金刚',
