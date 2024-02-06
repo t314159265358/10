@@ -1084,10 +1084,12 @@ main {
 .help {
     max-width: 50rem;
     min-height: 10rem;
+    max-height: calc(100vh - 10rem);
     background: var(--body-color);
     border-radius: 2rem;
     line-height: 1.5;
     position: relative;
+    overflow-y: scroll;
 
     section {
         padding: 2rem;
@@ -1261,8 +1263,22 @@ main {
         }
     }
 
+    .hero .title svg {
+        width: 15rem;
+    }
+
     .hero .banner {
         --lock-size: 6rem;
+    }
+
+    .hero .intro {
+        h2 {
+            font-size: 1.25rem;
+        }
+
+        h3 {
+            font-size: 1rem;
+        }
     }
 
     .sound-loop[data-layout="list"] {
