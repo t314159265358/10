@@ -364,13 +364,15 @@ body {
         }
 
         blockquote {
-            color: #ff0;
+            color: #875223;
+            background: #FCF5BA;
+            padding: 2px 8px;
+            border-radius: 4px;
 
             mark {
-                background: #ff0;
-                color: #000;
-                padding: 2px 4px;
-                border-radius: 2px;
+                font-weight: bold;
+                background: none;
+                color: inherit;
             }
         }
     }
