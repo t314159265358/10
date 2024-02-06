@@ -390,6 +390,8 @@ body {
         justify-content: center;
         position: relative;
         cursor: pointer;
+        max-width: 100%;
+        overflow: hidden;
 
         .waveform {
             width: 420px;
@@ -658,6 +660,8 @@ main {
     background: #f2f2f2;
     border-radius: 0 0 1rem 1rem;
     border-top: 1px solid rgba(128, 128, 128, .2);
+    max-height: calc(100vh - 10rem);
+    overflow-y: scroll;
 
     span {
         border-radius: .5rem;
