@@ -362,6 +362,17 @@ body {
             gap: 1rem;
             font-size: 12px;
         }
+
+        blockquote {
+            color: #ff0;
+
+            mark {
+                background: #ff0;
+                color: #000;
+                padding: 2px 4px;
+                border-radius: 2px;
+            }
+        }
     }
 
     .domain {

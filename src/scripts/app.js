@@ -34,7 +34,7 @@ let day = date.getDate();
 let month = date.getMonth() + 1;
 let year = date.getFullYear();
 let count = sounds.length
-document.querySelector('.intro p').innerHTML = `<span>更新日期：${year}年${month}月${day}日</span><span>音效数量：${count}个</span><span>QQ群：826566918</span>`
+document.querySelector('.intro p').innerHTML = `<span>更新日期：${year}年${month}月${day}日</span><span>音效数量：${count}个</span>`
 
 /**
  * Color Scheme
