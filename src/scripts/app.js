@@ -261,8 +261,12 @@ function downloadAudio(file, name = '') {
     document.querySelectorAll('.tags span').forEach((tag) => {
         tag.addEventListener('click', e => {
             document.querySelector('.filter').classList.remove('tags-open')
+
+            window.location.hash = tag.innerText
         })
     })
+
+
 }
 
 
@@ -327,7 +331,19 @@ function downloadAudio(file, name = '') {
 
         searchForm.requestSubmit()
     });
+
+    if (window.location.hash) {
+        const hash = decodeURI(window.location.hash.substring(1))
+        const tag = [...document.querySelectorAll('.tags span')].find(tag => tag.innerText == hash)
+
+        if (tag) {
+            document.querySelector('.search-form input').value = tag.innerText;
+            searchForm.requestSubmit()
+        }
+    }
 }
+
+
 
 
 /**

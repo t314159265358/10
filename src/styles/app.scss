@@ -705,6 +705,21 @@ main {
         background: rgba(128, 128, 128, .1);
         display: grid;
     }
+
+    .tags-toggle {
+        i {
+            &:before {
+                background: #E94235;
+                box-shadow: 0 8px 0 0 #4285F4;
+            }
+
+            &:after {
+                background: #34A853;
+                box-shadow: 0 8px 0 0 #FBBB06;
+            }
+        }
+
+    }
 }
 
 .toolbar:has(input:not(:placeholder-shown)) {
